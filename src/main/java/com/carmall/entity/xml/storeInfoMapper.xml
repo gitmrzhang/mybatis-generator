@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.carmall.mapper.storeInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.carmall.entity.storeInfo" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="addTime" property="addtime" jdbcType="TIMESTAMP" />
+    <result column="deleteStatus" property="deletestatus" jdbcType="INTEGER" />
+    <result column="bank_account_name" property="bankAccountName" jdbcType="VARCHAR" />
+    <result column="bank_c_account" property="bankCAccount" jdbcType="VARCHAR" />
+    <result column="bank_line_num" property="bankLineNum" jdbcType="VARCHAR" />
+    <result column="bank_name" property="bankName" jdbcType="VARCHAR" />
+    <result column="buygift_meal_endTime" property="buygiftMealEndtime" jdbcType="TIMESTAMP" />
+    <result column="combin_end_time" property="combinEndTime" jdbcType="TIMESTAMP" />
+    <result column="domain_modify_count" property="domainModifyCount" jdbcType="INTEGER" />
+    <result column="enoughreduce_meal_endTime" property="enoughreduceMealEndtime" jdbcType="TIMESTAMP" />
+    <result column="favorite_count" property="favoriteCount" jdbcType="INTEGER" />
+    <result column="gc_main_id" property="gcMainId" jdbcType="BIGINT" />
+    <result column="group_meal_endTime" property="groupMealEndtime" jdbcType="TIMESTAMP" />
+    <result column="license_address" property="licenseAddress" jdbcType="VARCHAR" />
+    <result column="license_business_scope" property="licenseBusinessScope" jdbcType="VARCHAR" />
+    <result column="license_c_address" property="licenseCAddress" jdbcType="VARCHAR" />
+    <result column="license_c_contact" property="licenseCContact" jdbcType="VARCHAR" />
+    <result column="license_c_mobile" property="licenseCMobile" jdbcType="VARCHAR" />
+    <result column="license_c_name" property="licenseCName" jdbcType="VARCHAR" />
+    <result column="license_c_telephone" property="licenseCTelephone" jdbcType="VARCHAR" />
+    <result column="license_end_date" property="licenseEndDate" jdbcType="TIMESTAMP" />
+    <result column="license_establish_date" property="licenseEstablishDate" jdbcType="TIMESTAMP" />
+    <result column="license_legal_idCard" property="licenseLegalIdcard" jdbcType="VARCHAR" />
+    <result column="license_legal_name" property="licenseLegalName" jdbcType="VARCHAR" />
+    <result column="license_num" property="licenseNum" jdbcType="VARCHAR" />
+    <result column="license_reg_capital" property="licenseRegCapital" jdbcType="VARCHAR" />
+    <result column="license_start_date" property="licenseStartDate" jdbcType="TIMESTAMP" />
+    <result column="organization_code" property="organizationCode" jdbcType="VARCHAR" />
+    <result column="send_email_count" property="sendEmailCount" jdbcType="INTEGER" />
+    <result column="send_sms_count" property="sendSmsCount" jdbcType="INTEGER" />
+    <result column="store_address" property="storeAddress" jdbcType="VARCHAR" />
+    <result column="store_commission_amount" property="storeCommissionAmount" jdbcType="DECIMAL" />
+    <result column="store_credit" property="storeCredit" jdbcType="INTEGER" />
+    <result column="store_decorate_old_theme" property="storeDecorateOldTheme" jdbcType="VARCHAR" />
+    <result column="store_decorate_theme" property="storeDecorateTheme" jdbcType="VARCHAR" />
+    <result column="store_email_count" property="storeEmailCount" jdbcType="INTEGER" />
+    <result column="store_msn" property="storeMsn" jdbcType="VARCHAR" />
+    <result column="store_name" property="storeName" jdbcType="VARCHAR" />
+    <result column="store_ower" property="storeOwer" jdbcType="VARCHAR" />
+    <result column="store_ower_card" property="storeOwerCard" jdbcType="VARCHAR" />
+    <result column="store_payoff_amount" property="storePayoffAmount" jdbcType="DECIMAL" />
+    <result column="store_qq" property="storeQq" jdbcType="VARCHAR" />
+    <result column="store_recommend" property="storeRecommend" jdbcType="BIT" />
+    <result column="store_recommend_time" property="storeRecommendTime" jdbcType="TIMESTAMP" />
+    <result column="store_sale_amount" property="storeSaleAmount" jdbcType="DECIMAL" />
+    <result column="store_second_domain" property="storeSecondDomain" jdbcType="VARCHAR" />
+    <result column="store_sms_count" property="storeSmsCount" jdbcType="INTEGER" />
+    <result column="store_start_time" property="storeStartTime" jdbcType="TIMESTAMP" />
+    <result column="store_status" property="storeStatus" jdbcType="INTEGER" />
+    <result column="store_telephone" property="storeTelephone" jdbcType="VARCHAR" />
+    <result column="store_ww" property="storeWw" jdbcType="VARCHAR" />
+    <result column="store_zip" property="storeZip" jdbcType="VARCHAR" />
+    <result column="tax_code" property="taxCode" jdbcType="VARCHAR" />
+    <result column="tax_type" property="taxType" jdbcType="VARCHAR" />
+    <result column="tax_type_code" property="taxTypeCode" jdbcType="VARCHAR" />
+    <result column="validity" property="validity" jdbcType="TIMESTAMP" />
+    <result column="area_id" property="areaId" jdbcType="BIGINT" />
+    <result column="bank_area_id" property="bankAreaId" jdbcType="BIGINT" />
+    <result column="bank_permit_image_id" property="bankPermitImageId" jdbcType="BIGINT" />
+    <result column="card_id" property="cardId" jdbcType="BIGINT" />
+    <result column="grade_id" property="gradeId" jdbcType="BIGINT" />
+    <result column="license_area_id" property="licenseAreaId" jdbcType="BIGINT" />
+    <result column="license_c_area_id" property="licenseCAreaId" jdbcType="BIGINT" />
+    <result column="license_image_id" property="licenseImageId" jdbcType="BIGINT" />
+    <result column="license_legal_idCard_image_id" property="licenseLegalIdcardImageId" jdbcType="BIGINT" />
+    <result column="organization_image_id" property="organizationImageId" jdbcType="BIGINT" />
+    <result column="store_banner_id" property="storeBannerId" jdbcType="BIGINT" />
+    <result column="store_license_id" property="storeLicenseId" jdbcType="BIGINT" />
+    <result column="store_logo_id" property="storeLogoId" jdbcType="BIGINT" />
+    <result column="tax_general_card_id" property="taxGeneralCardId" jdbcType="BIGINT" />
+    <result column="tax_reg_card_id" property="taxRegCardId" jdbcType="BIGINT" />
+    <result column="short_name" property="shortName" jdbcType="VARCHAR" />
+    <result column="isself" property="isself" jdbcType="INTEGER" />
+    <result column="audit_user_id" property="auditUserId" jdbcType="INTEGER" />
+    <result column="audit_date" property="auditDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.carmall.entity.storeInfoWithBLOBs" extends="BaseResultMap" >
+    <result column="gc_detail_info" property="gcDetailInfo" jdbcType="LONGVARCHAR" />
+    <result column="sms_email_info" property="smsEmailInfo" jdbcType="LONGVARCHAR" />
+    <result column="store_decorate_background_info" property="storeDecorateBackgroundInfo" jdbcType="LONGVARCHAR" />
+    <result column="store_decorate_background_old_info" property="storeDecorateBackgroundOldInfo" jdbcType="LONGVARCHAR" />
+    <result column="store_decorate_base_info" property="storeDecorateBaseInfo" jdbcType="LONGVARCHAR" />
+    <result column="store_decorate_base_old_info" property="storeDecorateBaseOldInfo" jdbcType="LONGVARCHAR" />
+    <result column="store_decorate_info" property="storeDecorateInfo" jdbcType="LONGVARCHAR" />
+    <result column="store_decorate_old_info" property="storeDecorateOldInfo" jdbcType="LONGVARCHAR" />
+    <result column="store_info" property="storeInfo" jdbcType="LONGVARCHAR" />
+    <result column="store_quick_menu" property="storeQuickMenu" jdbcType="LONGVARCHAR" />
+    <result column="store_seo_description" property="storeSeoDescription" jdbcType="LONGVARCHAR" />
+    <result column="store_seo_keywords" property="storeSeoKeywords" jdbcType="LONGVARCHAR" />
+    <result column="violation_reseaon" property="violationReseaon" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, addTime, deleteStatus, bank_account_name, bank_c_account, bank_line_num, bank_name, 
+    buygift_meal_endTime, combin_end_time, domain_modify_count, enoughreduce_meal_endTime, 
+    favorite_count, gc_main_id, group_meal_endTime, license_address, license_business_scope, 
+    license_c_address, license_c_contact, license_c_mobile, license_c_name, license_c_telephone, 
+    license_end_date, license_establish_date, license_legal_idCard, license_legal_name, 
+    license_num, license_reg_capital, license_start_date, organization_code, send_email_count, 
+    send_sms_count, store_address, store_commission_amount, store_credit, store_decorate_old_theme, 
+    store_decorate_theme, store_email_count, store_msn, store_name, store_ower, store_ower_card, 
+    store_payoff_amount, store_qq, store_recommend, store_recommend_time, store_sale_amount, 
+    store_second_domain, store_sms_count, store_start_time, store_status, store_telephone, 
+    store_ww, store_zip, tax_code, tax_type, tax_type_code, validity, area_id, bank_area_id, 
+    bank_permit_image_id, card_id, grade_id, license_area_id, license_c_area_id, license_image_id, 
+    license_legal_idCard_image_id, organization_image_id, store_banner_id, store_license_id, 
+    store_logo_id, tax_general_card_id, tax_reg_card_id, short_name, isself, audit_user_id, 
+    audit_date
+  </sql>
+  <sql id="Blob_Column_List" >
+    gc_detail_info, sms_email_info, store_decorate_background_info, store_decorate_background_old_info, 
+    store_decorate_base_info, store_decorate_base_old_info, store_decorate_info, store_decorate_old_info, 
+    store_info, store_quick_menu, store_seo_description, store_seo_keywords, violation_reseaon
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from iskyshop_store
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from iskyshop_store
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.carmall.entity.storeInfoWithBLOBs" >
+    insert into iskyshop_store (id, addTime, deleteStatus, 
+      bank_account_name, bank_c_account, bank_line_num, 
+      bank_name, buygift_meal_endTime, combin_end_time, 
+      domain_modify_count, enoughreduce_meal_endTime, 
+      favorite_count, gc_main_id, group_meal_endTime, 
+      license_address, license_business_scope, license_c_address, 
+      license_c_contact, license_c_mobile, license_c_name, 
+      license_c_telephone, license_end_date, license_establish_date, 
+      license_legal_idCard, license_legal_name, license_num, 
+      license_reg_capital, license_start_date, 
+      organization_code, send_email_count, send_sms_count, 
+      store_address, store_commission_amount, store_credit, 
+      store_decorate_old_theme, store_decorate_theme, 
+      store_email_count, store_msn, store_name, 
+      store_ower, store_ower_card, store_payoff_amount, 
+      store_qq, store_recommend, store_recommend_time, 
+      store_sale_amount, store_second_domain, store_sms_count, 
+      store_start_time, store_status, store_telephone, 
+      store_ww, store_zip, tax_code, 
+      tax_type, tax_type_code, validity, 
+      area_id, bank_area_id, bank_permit_image_id, 
+      card_id, grade_id, license_area_id, 
+      license_c_area_id, license_image_id, license_legal_idCard_image_id, 
+      organization_image_id, store_banner_id, store_license_id, 
+      store_logo_id, tax_general_card_id, tax_reg_card_id, 
+      short_name, isself, audit_user_id, 
+      audit_date, gc_detail_info, sms_email_info, 
+      store_decorate_background_info, store_decorate_background_old_info, 
+      store_decorate_base_info, store_decorate_base_old_info, 
+      store_decorate_info, store_decorate_old_info, 
+      store_info, store_quick_menu, store_seo_description, 
+      store_seo_keywords, violation_reseaon
+      )
+    values (#{id,jdbcType=BIGINT}, #{addtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=INTEGER}, 
+      #{bankAccountName,jdbcType=VARCHAR}, #{bankCAccount,jdbcType=VARCHAR}, #{bankLineNum,jdbcType=VARCHAR}, 
+      #{bankName,jdbcType=VARCHAR}, #{buygiftMealEndtime,jdbcType=TIMESTAMP}, #{combinEndTime,jdbcType=TIMESTAMP}, 
+      #{domainModifyCount,jdbcType=INTEGER}, #{enoughreduceMealEndtime,jdbcType=TIMESTAMP}, 
+      #{favoriteCount,jdbcType=INTEGER}, #{gcMainId,jdbcType=BIGINT}, #{groupMealEndtime,jdbcType=TIMESTAMP}, 
+      #{licenseAddress,jdbcType=VARCHAR}, #{licenseBusinessScope,jdbcType=VARCHAR}, #{licenseCAddress,jdbcType=VARCHAR}, 
+      #{licenseCContact,jdbcType=VARCHAR}, #{licenseCMobile,jdbcType=VARCHAR}, #{licenseCName,jdbcType=VARCHAR}, 
+      #{licenseCTelephone,jdbcType=VARCHAR}, #{licenseEndDate,jdbcType=TIMESTAMP}, #{licenseEstablishDate,jdbcType=TIMESTAMP}, 
+      #{licenseLegalIdcard,jdbcType=VARCHAR}, #{licenseLegalName,jdbcType=VARCHAR}, #{licenseNum,jdbcType=VARCHAR}, 
+      #{licenseRegCapital,jdbcType=VARCHAR}, #{licenseStartDate,jdbcType=TIMESTAMP}, 
+      #{organizationCode,jdbcType=VARCHAR}, #{sendEmailCount,jdbcType=INTEGER}, #{sendSmsCount,jdbcType=INTEGER}, 
+      #{storeAddress,jdbcType=VARCHAR}, #{storeCommissionAmount,jdbcType=DECIMAL}, #{storeCredit,jdbcType=INTEGER}, 
+      #{storeDecorateOldTheme,jdbcType=VARCHAR}, #{storeDecorateTheme,jdbcType=VARCHAR}, 
+      #{storeEmailCount,jdbcType=INTEGER}, #{storeMsn,jdbcType=VARCHAR}, #{storeName,jdbcType=VARCHAR}, 
+      #{storeOwer,jdbcType=VARCHAR}, #{storeOwerCard,jdbcType=VARCHAR}, #{storePayoffAmount,jdbcType=DECIMAL}, 
+      #{storeQq,jdbcType=VARCHAR}, #{storeRecommend,jdbcType=BIT}, #{storeRecommendTime,jdbcType=TIMESTAMP}, 
+      #{storeSaleAmount,jdbcType=DECIMAL}, #{storeSecondDomain,jdbcType=VARCHAR}, #{storeSmsCount,jdbcType=INTEGER}, 
+      #{storeStartTime,jdbcType=TIMESTAMP}, #{storeStatus,jdbcType=INTEGER}, #{storeTelephone,jdbcType=VARCHAR}, 
+      #{storeWw,jdbcType=VARCHAR}, #{storeZip,jdbcType=VARCHAR}, #{taxCode,jdbcType=VARCHAR}, 
+      #{taxType,jdbcType=VARCHAR}, #{taxTypeCode,jdbcType=VARCHAR}, #{validity,jdbcType=TIMESTAMP}, 
+      #{areaId,jdbcType=BIGINT}, #{bankAreaId,jdbcType=BIGINT}, #{bankPermitImageId,jdbcType=BIGINT}, 
+      #{cardId,jdbcType=BIGINT}, #{gradeId,jdbcType=BIGINT}, #{licenseAreaId,jdbcType=BIGINT}, 
+      #{licenseCAreaId,jdbcType=BIGINT}, #{licenseImageId,jdbcType=BIGINT}, #{licenseLegalIdcardImageId,jdbcType=BIGINT}, 
+      #{organizationImageId,jdbcType=BIGINT}, #{storeBannerId,jdbcType=BIGINT}, #{storeLicenseId,jdbcType=BIGINT}, 
+      #{storeLogoId,jdbcType=BIGINT}, #{taxGeneralCardId,jdbcType=BIGINT}, #{taxRegCardId,jdbcType=BIGINT}, 
+      #{shortName,jdbcType=VARCHAR}, #{isself,jdbcType=INTEGER}, #{auditUserId,jdbcType=INTEGER}, 
+      #{auditDate,jdbcType=TIMESTAMP}, #{gcDetailInfo,jdbcType=LONGVARCHAR}, #{smsEmailInfo,jdbcType=LONGVARCHAR}, 
+      #{storeDecorateBackgroundInfo,jdbcType=LONGVARCHAR}, #{storeDecorateBackgroundOldInfo,jdbcType=LONGVARCHAR}, 
+      #{storeDecorateBaseInfo,jdbcType=LONGVARCHAR}, #{storeDecorateBaseOldInfo,jdbcType=LONGVARCHAR}, 
+      #{storeDecorateInfo,jdbcType=LONGVARCHAR}, #{storeDecorateOldInfo,jdbcType=LONGVARCHAR}, 
+      #{storeInfo,jdbcType=LONGVARCHAR}, #{storeQuickMenu,jdbcType=LONGVARCHAR}, #{storeSeoDescription,jdbcType=LONGVARCHAR}, 
+      #{storeSeoKeywords,jdbcType=LONGVARCHAR}, #{violationReseaon,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.carmall.entity.storeInfoWithBLOBs" >
+    insert into iskyshop_store
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="addtime != null" >
+        addTime,
+      </if>
+      <if test="deletestatus != null" >
+        deleteStatus,
+      </if>
+      <if test="bankAccountName != null" >
+        bank_account_name,
+      </if>
+      <if test="bankCAccount != null" >
+        bank_c_account,
+      </if>
+      <if test="bankLineNum != null" >
+        bank_line_num,
+      </if>
+      <if test="bankName != null" >
+        bank_name,
+      </if>
+      <if test="buygiftMealEndtime != null" >
+        buygift_meal_endTime,
+      </if>
+      <if test="combinEndTime != null" >
+        combin_end_time,
+      </if>
+      <if test="domainModifyCount != null" >
+        domain_modify_count,
+      </if>
+      <if test="enoughreduceMealEndtime != null" >
+        enoughreduce_meal_endTime,
+      </if>
+      <if test="favoriteCount != null" >
+        favorite_count,
+      </if>
+      <if test="gcMainId != null" >
+        gc_main_id,
+      </if>
+      <if test="groupMealEndtime != null" >
+        group_meal_endTime,
+      </if>
+      <if test="licenseAddress != null" >
+        license_address,
+      </if>
+      <if test="licenseBusinessScope != null" >
+        license_business_scope,
+      </if>
+      <if test="licenseCAddress != null" >
+        license_c_address,
+      </if>
+      <if test="licenseCContact != null" >
+        license_c_contact,
+      </if>
+      <if test="licenseCMobile != null" >
+        license_c_mobile,
+      </if>
+      <if test="licenseCName != null" >
+        license_c_name,
+      </if>
+      <if test="licenseCTelephone != null" >
+        license_c_telephone,
+      </if>
+      <if test="licenseEndDate != null" >
+        license_end_date,
+      </if>
+      <if test="licenseEstablishDate != null" >
+        license_establish_date,
+      </if>
+      <if test="licenseLegalIdcard != null" >
+        license_legal_idCard,
+      </if>
+      <if test="licenseLegalName != null" >
+        license_legal_name,
+      </if>
+      <if test="licenseNum != null" >
+        license_num,
+      </if>
+      <if test="licenseRegCapital != null" >
+        license_reg_capital,
+      </if>
+      <if test="licenseStartDate != null" >
+        license_start_date,
+      </if>
+      <if test="organizationCode != null" >
+        organization_code,
+      </if>
+      <if test="sendEmailCount != null" >
+        send_email_count,
+      </if>
+      <if test="sendSmsCount != null" >
+        send_sms_count,
+      </if>
+      <if test="storeAddress != null" >
+        store_address,
+      </if>
+      <if test="storeCommissionAmount != null" >
+        store_commission_amount,
+      </if>
+      <if test="storeCredit != null" >
+        store_credit,
+      </if>
+      <if test="storeDecorateOldTheme != null" >
+        store_decorate_old_theme,
+      </if>
+      <if test="storeDecorateTheme != null" >
+        store_decorate_theme,
+      </if>
+      <if test="storeEmailCount != null" >
+        store_email_count,
+      </if>
+      <if test="storeMsn != null" >
+        store_msn,
+      </if>
+      <if test="storeName != null" >
+        store_name,
+      </if>
+      <if test="storeOwer != null" >
+        store_ower,
+      </if>
+      <if test="storeOwerCard != null" >
+        store_ower_card,
+      </if>
+      <if test="storePayoffAmount != null" >
+        store_payoff_amount,
+      </if>
+      <if test="storeQq != null" >
+        store_qq,
+      </if>
+      <if test="storeRecommend != null" >
+        store_recommend,
+      </if>
+      <if test="storeRecommendTime != null" >
+        store_recommend_time,
+      </if>
+      <if test="storeSaleAmount != null" >
+        store_sale_amount,
+      </if>
+      <if test="storeSecondDomain != null" >
+        store_second_domain,
+      </if>
+      <if test="storeSmsCount != null" >
+        store_sms_count,
+      </if>
+      <if test="storeStartTime != null" >
+        store_start_time,
+      </if>
+      <if test="storeStatus != null" >
+        store_status,
+      </if>
+      <if test="storeTelephone != null" >
+        store_telephone,
+      </if>
+      <if test="storeWw != null" >
+        store_ww,
+      </if>
+      <if test="storeZip != null" >
+        store_zip,
+      </if>
+      <if test="taxCode != null" >
+        tax_code,
+      </if>
+      <if test="taxType != null" >
+        tax_type,
+      </if>
+      <if test="taxTypeCode != null" >
+        tax_type_code,
+      </if>
+      <if test="validity != null" >
+        validity,
+      </if>
+      <if test="areaId != null" >
+        area_id,
+      </if>
+      <if test="bankAreaId != null" >
+        bank_area_id,
+      </if>
+      <if test="bankPermitImageId != null" >
+        bank_permit_image_id,
+      </if>
+      <if test="cardId != null" >
+        card_id,
+      </if>
+      <if test="gradeId != null" >
+        grade_id,
+      </if>
+      <if test="licenseAreaId != null" >
+        license_area_id,
+      </if>
+      <if test="licenseCAreaId != null" >
+        license_c_area_id,
+      </if>
+      <if test="licenseImageId != null" >
+        license_image_id,
+      </if>
+      <if test="licenseLegalIdcardImageId != null" >
+        license_legal_idCard_image_id,
+      </if>
+      <if test="organizationImageId != null" >
+        organization_image_id,
+      </if>
+      <if test="storeBannerId != null" >
+        store_banner_id,
+      </if>
+      <if test="storeLicenseId != null" >
+        store_license_id,
+      </if>
+      <if test="storeLogoId != null" >
+        store_logo_id,
+      </if>
+      <if test="taxGeneralCardId != null" >
+        tax_general_card_id,
+      </if>
+      <if test="taxRegCardId != null" >
+        tax_reg_card_id,
+      </if>
+      <if test="shortName != null" >
+        short_name,
+      </if>
+      <if test="isself != null" >
+        isself,
+      </if>
+      <if test="auditUserId != null" >
+        audit_user_id,
+      </if>
+      <if test="auditDate != null" >
+        audit_date,
+      </if>
+      <if test="gcDetailInfo != null" >
+        gc_detail_info,
+      </if>
+      <if test="smsEmailInfo != null" >
+        sms_email_info,
+      </if>
+      <if test="storeDecorateBackgroundInfo != null" >
+        store_decorate_background_info,
+      </if>
+      <if test="storeDecorateBackgroundOldInfo != null" >
+        store_decorate_background_old_info,
+      </if>
+      <if test="storeDecorateBaseInfo != null" >
+        store_decorate_base_info,
+      </if>
+      <if test="storeDecorateBaseOldInfo != null" >
+        store_decorate_base_old_info,
+      </if>
+      <if test="storeDecorateInfo != null" >
+        store_decorate_info,
+      </if>
+      <if test="storeDecorateOldInfo != null" >
+        store_decorate_old_info,
+      </if>
+      <if test="storeInfo != null" >
+        store_info,
+      </if>
+      <if test="storeQuickMenu != null" >
+        store_quick_menu,
+      </if>
+      <if test="storeSeoDescription != null" >
+        store_seo_description,
+      </if>
+      <if test="storeSeoKeywords != null" >
+        store_seo_keywords,
+      </if>
+      <if test="violationReseaon != null" >
+        violation_reseaon,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null" >
+        #{deletestatus,jdbcType=INTEGER},
+      </if>
+      <if test="bankAccountName != null" >
+        #{bankAccountName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankCAccount != null" >
+        #{bankCAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="bankLineNum != null" >
+        #{bankLineNum,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="buygiftMealEndtime != null" >
+        #{buygiftMealEndtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="combinEndTime != null" >
+        #{combinEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="domainModifyCount != null" >
+        #{domainModifyCount,jdbcType=INTEGER},
+      </if>
+      <if test="enoughreduceMealEndtime != null" >
+        #{enoughreduceMealEndtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="favoriteCount != null" >
+        #{favoriteCount,jdbcType=INTEGER},
+      </if>
+      <if test="gcMainId != null" >
+        #{gcMainId,jdbcType=BIGINT},
+      </if>
+      <if test="groupMealEndtime != null" >
+        #{groupMealEndtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="licenseAddress != null" >
+        #{licenseAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseBusinessScope != null" >
+        #{licenseBusinessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCAddress != null" >
+        #{licenseCAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCContact != null" >
+        #{licenseCContact,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCMobile != null" >
+        #{licenseCMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCName != null" >
+        #{licenseCName,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCTelephone != null" >
+        #{licenseCTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseEndDate != null" >
+        #{licenseEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="licenseEstablishDate != null" >
+        #{licenseEstablishDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="licenseLegalIdcard != null" >
+        #{licenseLegalIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseLegalName != null" >
+        #{licenseLegalName,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseNum != null" >
+        #{licenseNum,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseRegCapital != null" >
+        #{licenseRegCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseStartDate != null" >
+        #{licenseStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="organizationCode != null" >
+        #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sendEmailCount != null" >
+        #{sendEmailCount,jdbcType=INTEGER},
+      </if>
+      <if test="sendSmsCount != null" >
+        #{sendSmsCount,jdbcType=INTEGER},
+      </if>
+      <if test="storeAddress != null" >
+        #{storeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCommissionAmount != null" >
+        #{storeCommissionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="storeCredit != null" >
+        #{storeCredit,jdbcType=INTEGER},
+      </if>
+      <if test="storeDecorateOldTheme != null" >
+        #{storeDecorateOldTheme,jdbcType=VARCHAR},
+      </if>
+      <if test="storeDecorateTheme != null" >
+        #{storeDecorateTheme,jdbcType=VARCHAR},
+      </if>
+      <if test="storeEmailCount != null" >
+        #{storeEmailCount,jdbcType=INTEGER},
+      </if>
+      <if test="storeMsn != null" >
+        #{storeMsn,jdbcType=VARCHAR},
+      </if>
+      <if test="storeName != null" >
+        #{storeName,jdbcType=VARCHAR},
+      </if>
+      <if test="storeOwer != null" >
+        #{storeOwer,jdbcType=VARCHAR},
+      </if>
+      <if test="storeOwerCard != null" >
+        #{storeOwerCard,jdbcType=VARCHAR},
+      </if>
+      <if test="storePayoffAmount != null" >
+        #{storePayoffAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="storeQq != null" >
+        #{storeQq,jdbcType=VARCHAR},
+      </if>
+      <if test="storeRecommend != null" >
+        #{storeRecommend,jdbcType=BIT},
+      </if>
+      <if test="storeRecommendTime != null" >
+        #{storeRecommendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeSaleAmount != null" >
+        #{storeSaleAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="storeSecondDomain != null" >
+        #{storeSecondDomain,jdbcType=VARCHAR},
+      </if>
+      <if test="storeSmsCount != null" >
+        #{storeSmsCount,jdbcType=INTEGER},
+      </if>
+      <if test="storeStartTime != null" >
+        #{storeStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeStatus != null" >
+        #{storeStatus,jdbcType=INTEGER},
+      </if>
+      <if test="storeTelephone != null" >
+        #{storeTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="storeWw != null" >
+        #{storeWw,jdbcType=VARCHAR},
+      </if>
+      <if test="storeZip != null" >
+        #{storeZip,jdbcType=VARCHAR},
+      </if>
+      <if test="taxCode != null" >
+        #{taxCode,jdbcType=VARCHAR},
+      </if>
+      <if test="taxType != null" >
+        #{taxType,jdbcType=VARCHAR},
+      </if>
+      <if test="taxTypeCode != null" >
+        #{taxTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="validity != null" >
+        #{validity,jdbcType=TIMESTAMP},
+      </if>
+      <if test="areaId != null" >
+        #{areaId,jdbcType=BIGINT},
+      </if>
+      <if test="bankAreaId != null" >
+        #{bankAreaId,jdbcType=BIGINT},
+      </if>
+      <if test="bankPermitImageId != null" >
+        #{bankPermitImageId,jdbcType=BIGINT},
+      </if>
+      <if test="cardId != null" >
+        #{cardId,jdbcType=BIGINT},
+      </if>
+      <if test="gradeId != null" >
+        #{gradeId,jdbcType=BIGINT},
+      </if>
+      <if test="licenseAreaId != null" >
+        #{licenseAreaId,jdbcType=BIGINT},
+      </if>
+      <if test="licenseCAreaId != null" >
+        #{licenseCAreaId,jdbcType=BIGINT},
+      </if>
+      <if test="licenseImageId != null" >
+        #{licenseImageId,jdbcType=BIGINT},
+      </if>
+      <if test="licenseLegalIdcardImageId != null" >
+        #{licenseLegalIdcardImageId,jdbcType=BIGINT},
+      </if>
+      <if test="organizationImageId != null" >
+        #{organizationImageId,jdbcType=BIGINT},
+      </if>
+      <if test="storeBannerId != null" >
+        #{storeBannerId,jdbcType=BIGINT},
+      </if>
+      <if test="storeLicenseId != null" >
+        #{storeLicenseId,jdbcType=BIGINT},
+      </if>
+      <if test="storeLogoId != null" >
+        #{storeLogoId,jdbcType=BIGINT},
+      </if>
+      <if test="taxGeneralCardId != null" >
+        #{taxGeneralCardId,jdbcType=BIGINT},
+      </if>
+      <if test="taxRegCardId != null" >
+        #{taxRegCardId,jdbcType=BIGINT},
+      </if>
+      <if test="shortName != null" >
+        #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="isself != null" >
+        #{isself,jdbcType=INTEGER},
+      </if>
+      <if test="auditUserId != null" >
+        #{auditUserId,jdbcType=INTEGER},
+      </if>
+      <if test="auditDate != null" >
+        #{auditDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gcDetailInfo != null" >
+        #{gcDetailInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="smsEmailInfo != null" >
+        #{smsEmailInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateBackgroundInfo != null" >
+        #{storeDecorateBackgroundInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateBackgroundOldInfo != null" >
+        #{storeDecorateBackgroundOldInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateBaseInfo != null" >
+        #{storeDecorateBaseInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateBaseOldInfo != null" >
+        #{storeDecorateBaseOldInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateInfo != null" >
+        #{storeDecorateInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateOldInfo != null" >
+        #{storeDecorateOldInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeInfo != null" >
+        #{storeInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeQuickMenu != null" >
+        #{storeQuickMenu,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeSeoDescription != null" >
+        #{storeSeoDescription,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeSeoKeywords != null" >
+        #{storeSeoKeywords,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="violationReseaon != null" >
+        #{violationReseaon,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.carmall.entity.storeInfoWithBLOBs" >
+    update iskyshop_store
+    <set >
+      <if test="addtime != null" >
+        addTime = #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null" >
+        deleteStatus = #{deletestatus,jdbcType=INTEGER},
+      </if>
+      <if test="bankAccountName != null" >
+        bank_account_name = #{bankAccountName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankCAccount != null" >
+        bank_c_account = #{bankCAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="bankLineNum != null" >
+        bank_line_num = #{bankLineNum,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        bank_name = #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="buygiftMealEndtime != null" >
+        buygift_meal_endTime = #{buygiftMealEndtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="combinEndTime != null" >
+        combin_end_time = #{combinEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="domainModifyCount != null" >
+        domain_modify_count = #{domainModifyCount,jdbcType=INTEGER},
+      </if>
+      <if test="enoughreduceMealEndtime != null" >
+        enoughreduce_meal_endTime = #{enoughreduceMealEndtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="favoriteCount != null" >
+        favorite_count = #{favoriteCount,jdbcType=INTEGER},
+      </if>
+      <if test="gcMainId != null" >
+        gc_main_id = #{gcMainId,jdbcType=BIGINT},
+      </if>
+      <if test="groupMealEndtime != null" >
+        group_meal_endTime = #{groupMealEndtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="licenseAddress != null" >
+        license_address = #{licenseAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseBusinessScope != null" >
+        license_business_scope = #{licenseBusinessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCAddress != null" >
+        license_c_address = #{licenseCAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCContact != null" >
+        license_c_contact = #{licenseCContact,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCMobile != null" >
+        license_c_mobile = #{licenseCMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCName != null" >
+        license_c_name = #{licenseCName,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseCTelephone != null" >
+        license_c_telephone = #{licenseCTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseEndDate != null" >
+        license_end_date = #{licenseEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="licenseEstablishDate != null" >
+        license_establish_date = #{licenseEstablishDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="licenseLegalIdcard != null" >
+        license_legal_idCard = #{licenseLegalIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseLegalName != null" >
+        license_legal_name = #{licenseLegalName,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseNum != null" >
+        license_num = #{licenseNum,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseRegCapital != null" >
+        license_reg_capital = #{licenseRegCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseStartDate != null" >
+        license_start_date = #{licenseStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="organizationCode != null" >
+        organization_code = #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sendEmailCount != null" >
+        send_email_count = #{sendEmailCount,jdbcType=INTEGER},
+      </if>
+      <if test="sendSmsCount != null" >
+        send_sms_count = #{sendSmsCount,jdbcType=INTEGER},
+      </if>
+      <if test="storeAddress != null" >
+        store_address = #{storeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCommissionAmount != null" >
+        store_commission_amount = #{storeCommissionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="storeCredit != null" >
+        store_credit = #{storeCredit,jdbcType=INTEGER},
+      </if>
+      <if test="storeDecorateOldTheme != null" >
+        store_decorate_old_theme = #{storeDecorateOldTheme,jdbcType=VARCHAR},
+      </if>
+      <if test="storeDecorateTheme != null" >
+        store_decorate_theme = #{storeDecorateTheme,jdbcType=VARCHAR},
+      </if>
+      <if test="storeEmailCount != null" >
+        store_email_count = #{storeEmailCount,jdbcType=INTEGER},
+      </if>
+      <if test="storeMsn != null" >
+        store_msn = #{storeMsn,jdbcType=VARCHAR},
+      </if>
+      <if test="storeName != null" >
+        store_name = #{storeName,jdbcType=VARCHAR},
+      </if>
+      <if test="storeOwer != null" >
+        store_ower = #{storeOwer,jdbcType=VARCHAR},
+      </if>
+      <if test="storeOwerCard != null" >
+        store_ower_card = #{storeOwerCard,jdbcType=VARCHAR},
+      </if>
+      <if test="storePayoffAmount != null" >
+        store_payoff_amount = #{storePayoffAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="storeQq != null" >
+        store_qq = #{storeQq,jdbcType=VARCHAR},
+      </if>
+      <if test="storeRecommend != null" >
+        store_recommend = #{storeRecommend,jdbcType=BIT},
+      </if>
+      <if test="storeRecommendTime != null" >
+        store_recommend_time = #{storeRecommendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeSaleAmount != null" >
+        store_sale_amount = #{storeSaleAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="storeSecondDomain != null" >
+        store_second_domain = #{storeSecondDomain,jdbcType=VARCHAR},
+      </if>
+      <if test="storeSmsCount != null" >
+        store_sms_count = #{storeSmsCount,jdbcType=INTEGER},
+      </if>
+      <if test="storeStartTime != null" >
+        store_start_time = #{storeStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeStatus != null" >
+        store_status = #{storeStatus,jdbcType=INTEGER},
+      </if>
+      <if test="storeTelephone != null" >
+        store_telephone = #{storeTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="storeWw != null" >
+        store_ww = #{storeWw,jdbcType=VARCHAR},
+      </if>
+      <if test="storeZip != null" >
+        store_zip = #{storeZip,jdbcType=VARCHAR},
+      </if>
+      <if test="taxCode != null" >
+        tax_code = #{taxCode,jdbcType=VARCHAR},
+      </if>
+      <if test="taxType != null" >
+        tax_type = #{taxType,jdbcType=VARCHAR},
+      </if>
+      <if test="taxTypeCode != null" >
+        tax_type_code = #{taxTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="validity != null" >
+        validity = #{validity,jdbcType=TIMESTAMP},
+      </if>
+      <if test="areaId != null" >
+        area_id = #{areaId,jdbcType=BIGINT},
+      </if>
+      <if test="bankAreaId != null" >
+        bank_area_id = #{bankAreaId,jdbcType=BIGINT},
+      </if>
+      <if test="bankPermitImageId != null" >
+        bank_permit_image_id = #{bankPermitImageId,jdbcType=BIGINT},
+      </if>
+      <if test="cardId != null" >
+        card_id = #{cardId,jdbcType=BIGINT},
+      </if>
+      <if test="gradeId != null" >
+        grade_id = #{gradeId,jdbcType=BIGINT},
+      </if>
+      <if test="licenseAreaId != null" >
+        license_area_id = #{licenseAreaId,jdbcType=BIGINT},
+      </if>
+      <if test="licenseCAreaId != null" >
+        license_c_area_id = #{licenseCAreaId,jdbcType=BIGINT},
+      </if>
+      <if test="licenseImageId != null" >
+        license_image_id = #{licenseImageId,jdbcType=BIGINT},
+      </if>
+      <if test="licenseLegalIdcardImageId != null" >
+        license_legal_idCard_image_id = #{licenseLegalIdcardImageId,jdbcType=BIGINT},
+      </if>
+      <if test="organizationImageId != null" >
+        organization_image_id = #{organizationImageId,jdbcType=BIGINT},
+      </if>
+      <if test="storeBannerId != null" >
+        store_banner_id = #{storeBannerId,jdbcType=BIGINT},
+      </if>
+      <if test="storeLicenseId != null" >
+        store_license_id = #{storeLicenseId,jdbcType=BIGINT},
+      </if>
+      <if test="storeLogoId != null" >
+        store_logo_id = #{storeLogoId,jdbcType=BIGINT},
+      </if>
+      <if test="taxGeneralCardId != null" >
+        tax_general_card_id = #{taxGeneralCardId,jdbcType=BIGINT},
+      </if>
+      <if test="taxRegCardId != null" >
+        tax_reg_card_id = #{taxRegCardId,jdbcType=BIGINT},
+      </if>
+      <if test="shortName != null" >
+        short_name = #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="isself != null" >
+        isself = #{isself,jdbcType=INTEGER},
+      </if>
+      <if test="auditUserId != null" >
+        audit_user_id = #{auditUserId,jdbcType=INTEGER},
+      </if>
+      <if test="auditDate != null" >
+        audit_date = #{auditDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gcDetailInfo != null" >
+        gc_detail_info = #{gcDetailInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="smsEmailInfo != null" >
+        sms_email_info = #{smsEmailInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateBackgroundInfo != null" >
+        store_decorate_background_info = #{storeDecorateBackgroundInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateBackgroundOldInfo != null" >
+        store_decorate_background_old_info = #{storeDecorateBackgroundOldInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateBaseInfo != null" >
+        store_decorate_base_info = #{storeDecorateBaseInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateBaseOldInfo != null" >
+        store_decorate_base_old_info = #{storeDecorateBaseOldInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateInfo != null" >
+        store_decorate_info = #{storeDecorateInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeDecorateOldInfo != null" >
+        store_decorate_old_info = #{storeDecorateOldInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeInfo != null" >
+        store_info = #{storeInfo,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeQuickMenu != null" >
+        store_quick_menu = #{storeQuickMenu,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeSeoDescription != null" >
+        store_seo_description = #{storeSeoDescription,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="storeSeoKeywords != null" >
+        store_seo_keywords = #{storeSeoKeywords,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="violationReseaon != null" >
+        violation_reseaon = #{violationReseaon,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.carmall.entity.storeInfoWithBLOBs" >
+    update iskyshop_store
+    set addTime = #{addtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=INTEGER},
+      bank_account_name = #{bankAccountName,jdbcType=VARCHAR},
+      bank_c_account = #{bankCAccount,jdbcType=VARCHAR},
+      bank_line_num = #{bankLineNum,jdbcType=VARCHAR},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      buygift_meal_endTime = #{buygiftMealEndtime,jdbcType=TIMESTAMP},
+      combin_end_time = #{combinEndTime,jdbcType=TIMESTAMP},
+      domain_modify_count = #{domainModifyCount,jdbcType=INTEGER},
+      enoughreduce_meal_endTime = #{enoughreduceMealEndtime,jdbcType=TIMESTAMP},
+      favorite_count = #{favoriteCount,jdbcType=INTEGER},
+      gc_main_id = #{gcMainId,jdbcType=BIGINT},
+      group_meal_endTime = #{groupMealEndtime,jdbcType=TIMESTAMP},
+      license_address = #{licenseAddress,jdbcType=VARCHAR},
+      license_business_scope = #{licenseBusinessScope,jdbcType=VARCHAR},
+      license_c_address = #{licenseCAddress,jdbcType=VARCHAR},
+      license_c_contact = #{licenseCContact,jdbcType=VARCHAR},
+      license_c_mobile = #{licenseCMobile,jdbcType=VARCHAR},
+      license_c_name = #{licenseCName,jdbcType=VARCHAR},
+      license_c_telephone = #{licenseCTelephone,jdbcType=VARCHAR},
+      license_end_date = #{licenseEndDate,jdbcType=TIMESTAMP},
+      license_establish_date = #{licenseEstablishDate,jdbcType=TIMESTAMP},
+      license_legal_idCard = #{licenseLegalIdcard,jdbcType=VARCHAR},
+      license_legal_name = #{licenseLegalName,jdbcType=VARCHAR},
+      license_num = #{licenseNum,jdbcType=VARCHAR},
+      license_reg_capital = #{licenseRegCapital,jdbcType=VARCHAR},
+      license_start_date = #{licenseStartDate,jdbcType=TIMESTAMP},
+      organization_code = #{organizationCode,jdbcType=VARCHAR},
+      send_email_count = #{sendEmailCount,jdbcType=INTEGER},
+      send_sms_count = #{sendSmsCount,jdbcType=INTEGER},
+      store_address = #{storeAddress,jdbcType=VARCHAR},
+      store_commission_amount = #{storeCommissionAmount,jdbcType=DECIMAL},
+      store_credit = #{storeCredit,jdbcType=INTEGER},
+      store_decorate_old_theme = #{storeDecorateOldTheme,jdbcType=VARCHAR},
+      store_decorate_theme = #{storeDecorateTheme,jdbcType=VARCHAR},
+      store_email_count = #{storeEmailCount,jdbcType=INTEGER},
+      store_msn = #{storeMsn,jdbcType=VARCHAR},
+      store_name = #{storeName,jdbcType=VARCHAR},
+      store_ower = #{storeOwer,jdbcType=VARCHAR},
+      store_ower_card = #{storeOwerCard,jdbcType=VARCHAR},
+      store_payoff_amount = #{storePayoffAmount,jdbcType=DECIMAL},
+      store_qq = #{storeQq,jdbcType=VARCHAR},
+      store_recommend = #{storeRecommend,jdbcType=BIT},
+      store_recommend_time = #{storeRecommendTime,jdbcType=TIMESTAMP},
+      store_sale_amount = #{storeSaleAmount,jdbcType=DECIMAL},
+      store_second_domain = #{storeSecondDomain,jdbcType=VARCHAR},
+      store_sms_count = #{storeSmsCount,jdbcType=INTEGER},
+      store_start_time = #{storeStartTime,jdbcType=TIMESTAMP},
+      store_status = #{storeStatus,jdbcType=INTEGER},
+      store_telephone = #{storeTelephone,jdbcType=VARCHAR},
+      store_ww = #{storeWw,jdbcType=VARCHAR},
+      store_zip = #{storeZip,jdbcType=VARCHAR},
+      tax_code = #{taxCode,jdbcType=VARCHAR},
+      tax_type = #{taxType,jdbcType=VARCHAR},
+      tax_type_code = #{taxTypeCode,jdbcType=VARCHAR},
+      validity = #{validity,jdbcType=TIMESTAMP},
+      area_id = #{areaId,jdbcType=BIGINT},
+      bank_area_id = #{bankAreaId,jdbcType=BIGINT},
+      bank_permit_image_id = #{bankPermitImageId,jdbcType=BIGINT},
+      card_id = #{cardId,jdbcType=BIGINT},
+      grade_id = #{gradeId,jdbcType=BIGINT},
+      license_area_id = #{licenseAreaId,jdbcType=BIGINT},
+      license_c_area_id = #{licenseCAreaId,jdbcType=BIGINT},
+      license_image_id = #{licenseImageId,jdbcType=BIGINT},
+      license_legal_idCard_image_id = #{licenseLegalIdcardImageId,jdbcType=BIGINT},
+      organization_image_id = #{organizationImageId,jdbcType=BIGINT},
+      store_banner_id = #{storeBannerId,jdbcType=BIGINT},
+      store_license_id = #{storeLicenseId,jdbcType=BIGINT},
+      store_logo_id = #{storeLogoId,jdbcType=BIGINT},
+      tax_general_card_id = #{taxGeneralCardId,jdbcType=BIGINT},
+      tax_reg_card_id = #{taxRegCardId,jdbcType=BIGINT},
+      short_name = #{shortName,jdbcType=VARCHAR},
+      isself = #{isself,jdbcType=INTEGER},
+      audit_user_id = #{auditUserId,jdbcType=INTEGER},
+      audit_date = #{auditDate,jdbcType=TIMESTAMP},
+      gc_detail_info = #{gcDetailInfo,jdbcType=LONGVARCHAR},
+      sms_email_info = #{smsEmailInfo,jdbcType=LONGVARCHAR},
+      store_decorate_background_info = #{storeDecorateBackgroundInfo,jdbcType=LONGVARCHAR},
+      store_decorate_background_old_info = #{storeDecorateBackgroundOldInfo,jdbcType=LONGVARCHAR},
+      store_decorate_base_info = #{storeDecorateBaseInfo,jdbcType=LONGVARCHAR},
+      store_decorate_base_old_info = #{storeDecorateBaseOldInfo,jdbcType=LONGVARCHAR},
+      store_decorate_info = #{storeDecorateInfo,jdbcType=LONGVARCHAR},
+      store_decorate_old_info = #{storeDecorateOldInfo,jdbcType=LONGVARCHAR},
+      store_info = #{storeInfo,jdbcType=LONGVARCHAR},
+      store_quick_menu = #{storeQuickMenu,jdbcType=LONGVARCHAR},
+      store_seo_description = #{storeSeoDescription,jdbcType=LONGVARCHAR},
+      store_seo_keywords = #{storeSeoKeywords,jdbcType=LONGVARCHAR},
+      violation_reseaon = #{violationReseaon,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.carmall.entity.storeInfo" >
+    update iskyshop_store
+    set addTime = #{addtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=INTEGER},
+      bank_account_name = #{bankAccountName,jdbcType=VARCHAR},
+      bank_c_account = #{bankCAccount,jdbcType=VARCHAR},
+      bank_line_num = #{bankLineNum,jdbcType=VARCHAR},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      buygift_meal_endTime = #{buygiftMealEndtime,jdbcType=TIMESTAMP},
+      combin_end_time = #{combinEndTime,jdbcType=TIMESTAMP},
+      domain_modify_count = #{domainModifyCount,jdbcType=INTEGER},
+      enoughreduce_meal_endTime = #{enoughreduceMealEndtime,jdbcType=TIMESTAMP},
+      favorite_count = #{favoriteCount,jdbcType=INTEGER},
+      gc_main_id = #{gcMainId,jdbcType=BIGINT},
+      group_meal_endTime = #{groupMealEndtime,jdbcType=TIMESTAMP},
+      license_address = #{licenseAddress,jdbcType=VARCHAR},
+      license_business_scope = #{licenseBusinessScope,jdbcType=VARCHAR},
+      license_c_address = #{licenseCAddress,jdbcType=VARCHAR},
+      license_c_contact = #{licenseCContact,jdbcType=VARCHAR},
+      license_c_mobile = #{licenseCMobile,jdbcType=VARCHAR},
+      license_c_name = #{licenseCName,jdbcType=VARCHAR},
+      license_c_telephone = #{licenseCTelephone,jdbcType=VARCHAR},
+      license_end_date = #{licenseEndDate,jdbcType=TIMESTAMP},
+      license_establish_date = #{licenseEstablishDate,jdbcType=TIMESTAMP},
+      license_legal_idCard = #{licenseLegalIdcard,jdbcType=VARCHAR},
+      license_legal_name = #{licenseLegalName,jdbcType=VARCHAR},
+      license_num = #{licenseNum,jdbcType=VARCHAR},
+      license_reg_capital = #{licenseRegCapital,jdbcType=VARCHAR},
+      license_start_date = #{licenseStartDate,jdbcType=TIMESTAMP},
+      organization_code = #{organizationCode,jdbcType=VARCHAR},
+      send_email_count = #{sendEmailCount,jdbcType=INTEGER},
+      send_sms_count = #{sendSmsCount,jdbcType=INTEGER},
+      store_address = #{storeAddress,jdbcType=VARCHAR},
+      store_commission_amount = #{storeCommissionAmount,jdbcType=DECIMAL},
+      store_credit = #{storeCredit,jdbcType=INTEGER},
+      store_decorate_old_theme = #{storeDecorateOldTheme,jdbcType=VARCHAR},
+      store_decorate_theme = #{storeDecorateTheme,jdbcType=VARCHAR},
+      store_email_count = #{storeEmailCount,jdbcType=INTEGER},
+      store_msn = #{storeMsn,jdbcType=VARCHAR},
+      store_name = #{storeName,jdbcType=VARCHAR},
+      store_ower = #{storeOwer,jdbcType=VARCHAR},
+      store_ower_card = #{storeOwerCard,jdbcType=VARCHAR},
+      store_payoff_amount = #{storePayoffAmount,jdbcType=DECIMAL},
+      store_qq = #{storeQq,jdbcType=VARCHAR},
+      store_recommend = #{storeRecommend,jdbcType=BIT},
+      store_recommend_time = #{storeRecommendTime,jdbcType=TIMESTAMP},
+      store_sale_amount = #{storeSaleAmount,jdbcType=DECIMAL},
+      store_second_domain = #{storeSecondDomain,jdbcType=VARCHAR},
+      store_sms_count = #{storeSmsCount,jdbcType=INTEGER},
+      store_start_time = #{storeStartTime,jdbcType=TIMESTAMP},
+      store_status = #{storeStatus,jdbcType=INTEGER},
+      store_telephone = #{storeTelephone,jdbcType=VARCHAR},
+      store_ww = #{storeWw,jdbcType=VARCHAR},
+      store_zip = #{storeZip,jdbcType=VARCHAR},
+      tax_code = #{taxCode,jdbcType=VARCHAR},
+      tax_type = #{taxType,jdbcType=VARCHAR},
+      tax_type_code = #{taxTypeCode,jdbcType=VARCHAR},
+      validity = #{validity,jdbcType=TIMESTAMP},
+      area_id = #{areaId,jdbcType=BIGINT},
+      bank_area_id = #{bankAreaId,jdbcType=BIGINT},
+      bank_permit_image_id = #{bankPermitImageId,jdbcType=BIGINT},
+      card_id = #{cardId,jdbcType=BIGINT},
+      grade_id = #{gradeId,jdbcType=BIGINT},
+      license_area_id = #{licenseAreaId,jdbcType=BIGINT},
+      license_c_area_id = #{licenseCAreaId,jdbcType=BIGINT},
+      license_image_id = #{licenseImageId,jdbcType=BIGINT},
+      license_legal_idCard_image_id = #{licenseLegalIdcardImageId,jdbcType=BIGINT},
+      organization_image_id = #{organizationImageId,jdbcType=BIGINT},
+      store_banner_id = #{storeBannerId,jdbcType=BIGINT},
+      store_license_id = #{storeLicenseId,jdbcType=BIGINT},
+      store_logo_id = #{storeLogoId,jdbcType=BIGINT},
+      tax_general_card_id = #{taxGeneralCardId,jdbcType=BIGINT},
+      tax_reg_card_id = #{taxRegCardId,jdbcType=BIGINT},
+      short_name = #{shortName,jdbcType=VARCHAR},
+      isself = #{isself,jdbcType=INTEGER},
+      audit_user_id = #{auditUserId,jdbcType=INTEGER},
+      audit_date = #{auditDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
