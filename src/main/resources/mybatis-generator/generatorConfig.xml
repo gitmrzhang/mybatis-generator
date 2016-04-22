@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <context id="my" targetRuntime="MyBatis3">
+    <context id="my" targetRuntime="Ibatis2Java5">
         <commentGenerator>
             <property name="suppressDate" value="false"/>
             <property name="suppressAllComments" value="true"/>
@@ -25,16 +25,13 @@
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.carmall.mapper"
-                             targetProject="src/main/java" type="XMLMAPPER">
+        <javaClientGenerator targetPackage="com.carmall.dao"
+                             targetProject="src/main/java" type="SPRING">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
 
-        <table tableName="iskyshop_store" domainObjectName="storeInfo"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
+        <table tableName="iskyshop_store_active" domainObjectName="MerchantStoreActive">
         </table>
 
     </context>
