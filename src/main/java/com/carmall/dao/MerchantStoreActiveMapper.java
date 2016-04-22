@@ -1,8 +1,7 @@
 package com.carmall.dao;
 
-import com.carmall.entity.MerchantStoreActive;
-import com.carmall.entity.MerchantStoreActiveExample;
 import java.util.List;
+
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.DeleteProvider;
 import org.apache.ibatis.annotations.Insert;
@@ -15,6 +14,9 @@ import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.annotations.UpdateProvider;
 import org.apache.ibatis.type.JdbcType;
+
+import com.carmall.entity.MerchantStoreActive;
+import com.carmall.entity.MerchantStoreActiveExample;
 
 public interface MerchantStoreActiveMapper {
     @SelectProvider(type=MerchantStoreActiveSqlProvider.class, method="countByExample")
