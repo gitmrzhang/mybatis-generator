@@ -11,6 +11,10 @@
  * 修改时间：暂无<br/>
  */
 package com.carmall.core.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+
 /**
  * TODO 一句话描述类的主要作用<br/>
  * <p>
@@ -21,7 +25,10 @@ package com.carmall.core.dao;
  * @version 1.0.0
  * @since 1.0.0
  */
-public class BaseDao {
+public class BaseDao extends SqlSessionDaoSupport{
 	//TODO 记得要写注释，方便别人，成就自己。
+	public SqlSession getSqlSession(){
+		return this.getSqlSession();
+	}
 }
 
