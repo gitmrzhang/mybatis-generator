@@ -31,7 +31,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="iskyshop_store_active" domainObjectName="MerchantStoreActive">
+        <table tableName="t_auth_validate_log" domainObjectName="AuthValidateLogVo">
         </table>
 
     </context>

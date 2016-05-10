@@ -13,101 +13,79 @@ import static org.apache.ibatis.jdbc.SqlBuilder.UPDATE;
 import static org.apache.ibatis.jdbc.SqlBuilder.VALUES;
 import static org.apache.ibatis.jdbc.SqlBuilder.WHERE;
 
-import com.carmall.entity.MerchantStoreActive;
-import com.carmall.entity.MerchantStoreActiveExample.Criteria;
-import com.carmall.entity.MerchantStoreActiveExample.Criterion;
-import com.carmall.entity.MerchantStoreActiveExample;
+import com.carmall.entity.AuthValidateLogVo;
+import com.carmall.entity.AuthValidateLogVoExample.Criteria;
+import com.carmall.entity.AuthValidateLogVoExample.Criterion;
+import com.carmall.entity.AuthValidateLogVoExample;
 import java.util.List;
 import java.util.Map;
 
-public class MerchantStoreActiveSqlProvider {
+public class AuthValidateLogVoSqlProvider {
 
-    public String countByExample(MerchantStoreActiveExample example) {
+    public String countByExample(AuthValidateLogVoExample example) {
         BEGIN();
         SELECT("count (*)");
-        FROM("iskyshop_store_active");
+        FROM("t_auth_validate_log");
         applyWhere(example, false);
         return SQL();
     }
 
-    public String deleteByExample(MerchantStoreActiveExample example) {
+    public String deleteByExample(AuthValidateLogVoExample example) {
         BEGIN();
-        DELETE_FROM("iskyshop_store_active");
+        DELETE_FROM("t_auth_validate_log");
         applyWhere(example, false);
         return SQL();
     }
 
-    public String insertSelective(MerchantStoreActive record) {
+    public String insertSelective(AuthValidateLogVo record) {
         BEGIN();
-        INSERT_INTO("iskyshop_store_active");
+        INSERT_INTO("t_auth_validate_log");
         
         if (record.getId() != null) {
             VALUES("id", "#{id,jdbcType=BIGINT}");
         }
         
-        if (record.getStoreId() != null) {
-            VALUES("store_id", "#{storeId,jdbcType=BIGINT}");
+        if (record.getType() != null) {
+            VALUES("type", "#{type,jdbcType=TINYINT}");
         }
         
-        if (record.getActiveTitle() != null) {
-            VALUES("active_title", "#{activeTitle,jdbcType=VARCHAR}");
+        if (record.getCode() != null) {
+            VALUES("code", "#{code,jdbcType=VARCHAR}");
         }
         
-        if (record.getState() != null) {
-            VALUES("state", "#{state,jdbcType=INTEGER}");
+        if (record.getDestination() != null) {
+            VALUES("destination", "#{destination,jdbcType=VARCHAR}");
         }
         
-        if (record.getCreateTime() != null) {
-            VALUES("create_time", "#{createTime,jdbcType=TIMESTAMP}");
+        if (record.getUserid() != null) {
+            VALUES("userid", "#{userid,jdbcType=BIGINT}");
         }
         
-        if (record.getDoneTime() != null) {
-            VALUES("done_time", "#{doneTime,jdbcType=TIMESTAMP}");
+        if (record.getSource() != null) {
+            VALUES("source", "#{source,jdbcType=VARCHAR}");
         }
         
-        if (record.getActiveContent() != null) {
-            VALUES("active_content", "#{activeContent,jdbcType=LONGVARCHAR}");
+        if (record.getAddtime() != null) {
+            VALUES("addtime", "#{addtime,jdbcType=TIMESTAMP}");
         }
         
         return SQL();
     }
 
-    public String selectByExampleWithBLOBs(MerchantStoreActiveExample example) {
+    public String selectByExample(AuthValidateLogVoExample example) {
         BEGIN();
         if (example != null && example.isDistinct()) {
             SELECT_DISTINCT("id");
         } else {
             SELECT("id");
         }
-        SELECT("store_id");
-        SELECT("active_title");
-        SELECT("state");
-        SELECT("create_time");
-        SELECT("done_time");
-        SELECT("active_content");
-        FROM("iskyshop_store_active");
-        applyWhere(example, false);
-        
-        if (example != null && example.getOrderByClause() != null) {
-            ORDER_BY(example.getOrderByClause());
-        }
-        
-        return SQL();
-    }
-
-    public String selectByExample(MerchantStoreActiveExample example) {
-        BEGIN();
-        if (example != null && example.isDistinct()) {
-            SELECT_DISTINCT("id");
-        } else {
-            SELECT("id");
-        }
-        SELECT("store_id");
-        SELECT("active_title");
-        SELECT("state");
-        SELECT("create_time");
-        SELECT("done_time");
-        FROM("iskyshop_store_active");
+        SELECT("type");
+        SELECT("code");
+        SELECT("destination");
+        SELECT("userid");
+        SELECT("source");
+        SELECT("addtime");
+        FROM("t_auth_validate_log");
         applyWhere(example, false);
         
         if (example != null && example.getOrderByClause() != null) {
@@ -118,103 +96,87 @@ public class MerchantStoreActiveSqlProvider {
     }
 
     public String updateByExampleSelective(Map<String, Object> parameter) {
-        MerchantStoreActive record = (MerchantStoreActive) parameter.get("record");
-        MerchantStoreActiveExample example = (MerchantStoreActiveExample) parameter.get("example");
+        AuthValidateLogVo record = (AuthValidateLogVo) parameter.get("record");
+        AuthValidateLogVoExample example = (AuthValidateLogVoExample) parameter.get("example");
         
         BEGIN();
-        UPDATE("iskyshop_store_active");
+        UPDATE("t_auth_validate_log");
         
         if (record.getId() != null) {
             SET("id = #{record.id,jdbcType=BIGINT}");
         }
         
-        if (record.getStoreId() != null) {
-            SET("store_id = #{record.storeId,jdbcType=BIGINT}");
+        if (record.getType() != null) {
+            SET("type = #{record.type,jdbcType=TINYINT}");
         }
         
-        if (record.getActiveTitle() != null) {
-            SET("active_title = #{record.activeTitle,jdbcType=VARCHAR}");
+        if (record.getCode() != null) {
+            SET("code = #{record.code,jdbcType=VARCHAR}");
         }
         
-        if (record.getState() != null) {
-            SET("state = #{record.state,jdbcType=INTEGER}");
+        if (record.getDestination() != null) {
+            SET("destination = #{record.destination,jdbcType=VARCHAR}");
         }
         
-        if (record.getCreateTime() != null) {
-            SET("create_time = #{record.createTime,jdbcType=TIMESTAMP}");
+        if (record.getUserid() != null) {
+            SET("userid = #{record.userid,jdbcType=BIGINT}");
         }
         
-        if (record.getDoneTime() != null) {
-            SET("done_time = #{record.doneTime,jdbcType=TIMESTAMP}");
+        if (record.getSource() != null) {
+            SET("source = #{record.source,jdbcType=VARCHAR}");
         }
         
-        if (record.getActiveContent() != null) {
-            SET("active_content = #{record.activeContent,jdbcType=LONGVARCHAR}");
+        if (record.getAddtime() != null) {
+            SET("addtime = #{record.addtime,jdbcType=TIMESTAMP}");
         }
         
-        applyWhere(example, true);
-        return SQL();
-    }
-
-    public String updateByExampleWithBLOBs(Map<String, Object> parameter) {
-        BEGIN();
-        UPDATE("iskyshop_store_active");
-        
-        SET("id = #{record.id,jdbcType=BIGINT}");
-        SET("store_id = #{record.storeId,jdbcType=BIGINT}");
-        SET("active_title = #{record.activeTitle,jdbcType=VARCHAR}");
-        SET("state = #{record.state,jdbcType=INTEGER}");
-        SET("create_time = #{record.createTime,jdbcType=TIMESTAMP}");
-        SET("done_time = #{record.doneTime,jdbcType=TIMESTAMP}");
-        SET("active_content = #{record.activeContent,jdbcType=LONGVARCHAR}");
-        
-        MerchantStoreActiveExample example = (MerchantStoreActiveExample) parameter.get("example");
         applyWhere(example, true);
         return SQL();
     }
 
     public String updateByExample(Map<String, Object> parameter) {
         BEGIN();
-        UPDATE("iskyshop_store_active");
+        UPDATE("t_auth_validate_log");
         
         SET("id = #{record.id,jdbcType=BIGINT}");
-        SET("store_id = #{record.storeId,jdbcType=BIGINT}");
-        SET("active_title = #{record.activeTitle,jdbcType=VARCHAR}");
-        SET("state = #{record.state,jdbcType=INTEGER}");
-        SET("create_time = #{record.createTime,jdbcType=TIMESTAMP}");
-        SET("done_time = #{record.doneTime,jdbcType=TIMESTAMP}");
+        SET("type = #{record.type,jdbcType=TINYINT}");
+        SET("code = #{record.code,jdbcType=VARCHAR}");
+        SET("destination = #{record.destination,jdbcType=VARCHAR}");
+        SET("userid = #{record.userid,jdbcType=BIGINT}");
+        SET("source = #{record.source,jdbcType=VARCHAR}");
+        SET("addtime = #{record.addtime,jdbcType=TIMESTAMP}");
         
-        MerchantStoreActiveExample example = (MerchantStoreActiveExample) parameter.get("example");
+        AuthValidateLogVoExample example = (AuthValidateLogVoExample) parameter.get("example");
         applyWhere(example, true);
         return SQL();
     }
 
-    public String updateByPrimaryKeySelective(MerchantStoreActive record) {
+    public String updateByPrimaryKeySelective(AuthValidateLogVo record) {
         BEGIN();
-        UPDATE("iskyshop_store_active");
+        UPDATE("t_auth_validate_log");
         
-        if (record.getStoreId() != null) {
-            SET("store_id = #{storeId,jdbcType=BIGINT}");
+        if (record.getType() != null) {
+            SET("type = #{type,jdbcType=TINYINT}");
         }
         
-        if (record.getActiveTitle() != null) {
-            SET("active_title = #{activeTitle,jdbcType=VARCHAR}");
+        if (record.getCode() != null) {
+            SET("code = #{code,jdbcType=VARCHAR}");
         }
         
-        if (record.getState() != null) {
-            SET("state = #{state,jdbcType=INTEGER}");
+        if (record.getDestination() != null) {
+            SET("destination = #{destination,jdbcType=VARCHAR}");
         }
         
-        if (record.getCreateTime() != null) {
-            SET("create_time = #{createTime,jdbcType=TIMESTAMP}");
+        if (record.getUserid() != null) {
+            SET("userid = #{userid,jdbcType=BIGINT}");
         }
         
-        if (record.getDoneTime() != null) {
-            SET("done_time = #{doneTime,jdbcType=TIMESTAMP}");
+        if (record.getSource() != null) {
+            SET("source = #{source,jdbcType=VARCHAR}");
         }
         
-        if (record.getActiveContent() != null) {
-            SET("active_content = #{activeContent,jdbcType=LONGVARCHAR}");
+        if (record.getAddtime() != null) {
+            SET("addtime = #{addtime,jdbcType=TIMESTAMP}");
         }
         
         WHERE("id = #{id,jdbcType=BIGINT}");
@@ -222,7 +184,7 @@ public class MerchantStoreActiveSqlProvider {
         return SQL();
     }
 
-    protected void applyWhere(MerchantStoreActiveExample example, boolean includeExamplePhrase) {
+    protected void applyWhere(AuthValidateLogVoExample example, boolean includeExamplePhrase) {
         if (example == null) {
             return;
         }
